@@ -1,6 +1,6 @@
 'use client';
 
-import React, {usestate, useEffect, useState } from 'react';
+import React, {useState, useEffect, useState } from 'react';
 
 import GameBoard from '@/components/GameBoard';
 import ScoreBoard from '@/components/ScoreBoard';
@@ -33,7 +33,7 @@ const createCards = () => {
 };
 
 export default function Home() {
-  const[cards, setCard] = useState([]);
+  const[cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
   const[matchedCard, setMatchedCards] = useState([]);
   const[moves, setMoves] = useState(0);
