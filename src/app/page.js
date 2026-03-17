@@ -136,7 +136,7 @@ export default function MemoryCardGame() {
   const isGameComplete = matches === DIFFICULTIES[difficulty].pairs && matches > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a0f35] to-[#0f0822] flex flex-col items-center py-12 font-sans text-white">
+    <div className="min-h-screen bg-linear-to-br from-[#1a0f35] to-[#0f0822] flex flex-col items-center py-12 font-sans text-white">
       
       {/* CSS Animasi Float Tetap Dipertahankan */}
       <style>{`
@@ -154,7 +154,7 @@ export default function MemoryCardGame() {
         <div className="bg-yellow-400 p-2 rounded-lg text-black shadow-[0_0_15px_rgba(250,204,21,0.5)]">
           <GiCardJoker className="text-4xl" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-purple-300">
           Memory Card
         </h1>
       </div>
@@ -221,7 +221,7 @@ export default function MemoryCardGame() {
       </button>
 
       {/* --- Card Grid Container --- */}
-      <div className="bg-[#211440]/60 border border-white/10 rounded-[2rem] p-6 md:p-8 backdrop-blur-sm shadow-2xl">
+      <div className="bg-[#211440]/60 border border-white/10 rounded-4xl p-6 md:p-8 backdrop-blur-sm shadow-2xl">
         <div className="grid grid-cols-4 gap-4 md:gap-5">
           {cards.map((card, index) => {
             // Ambil referensi komponen Icon dari objek card
@@ -234,7 +234,7 @@ export default function MemoryCardGame() {
                 className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 transform ${
                   card.isFlipped || card.isMatched 
                     ? "bg-[#f4f4f5] rotate-0 shadow-inner" 
-                    : "bg-gradient-to-br from-[#c058f3] to-[#5b40e9] hover:scale-105 shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                    : "bg-linear-to-br from-[#c058f3] to-[#5b40e9] hover:scale-105 shadow-[0_0_15px_rgba(168,85,247,0.5)]"
                 } ${card.isMatched ? "opacity-70 scale-95" : ""}`}
               >
                 <span className={`text-3xl md:text-4xl font-bold drop-shadow-md transition-opacity duration-300 flex items-center justify-center`}>
