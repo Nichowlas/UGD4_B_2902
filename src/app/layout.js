@@ -13,23 +13,16 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-// Inisialisasi font Geist Mono (untuk teks monospace/kode)
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
-// Metadata halaman - ditampilkan di tab browser dan untuk SEO
-// title: judul yang muncul di tab browser
-// description: deskripsi halaman untuk mesin pencari
 export const metadata = {
   title: "Memory Card Game",
   description: "Latihan React Dasar - Memory Card Game",
 };
 
-// RootLayout adalah komponen layout utama yang membungkus SEMUA halaman
-// Parameter 'children' berisi konten halaman yang sedang ditampilkan (misal page.js)
-// Komponen ini wajib ada di Next.js App Router sebagai layout root
 export default function RootLayout({ children }) {
   return (
     // Tag <html> sebagai root element halaman
